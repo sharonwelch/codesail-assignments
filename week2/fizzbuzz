@@ -1,0 +1,20 @@
+# Instructions:
+# Write a script that, for the numbers between 0 to 100, outputs:
+  # "Fizz" if the number is a multiple of 3
+  # "Buzz" if the number is a multiple of 5
+  # "FizzBuzz" if the number is a multiple of 3 and 5
+  # the number if it's not a multiple of 3 or 5
+
+ary = Array(1..100)
+
+ary.each do |x|
+  if x%3 == 0 && x%5 == 0
+      puts "FizzBuzz"
+    elsif x%3 == 0
+      puts "Fizz"
+    elsif x%5 == 0
+      puts "Buzz"
+    else
+      puts x
+    end
+end
