@@ -15,4 +15,10 @@ class Hospital < Building
   def initialize (patientcount)
     @numpatients = patientcount
   end
+  def expand
+    puts "We now have room for more patients"
+  end
+  def self.repaint
+    puts "We're repainting the hospital light blue"
+  end
 end
