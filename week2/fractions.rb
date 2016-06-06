@@ -7,9 +7,11 @@
 
 puts "Please input a numerator"
 numer = gets
+numer
 
 puts "Please input a denominator"
 denom = gets
+denom
 
 class Fractions
   attr_accessor :numerator, :denominator
@@ -17,10 +19,12 @@ class Fractions
     @numerator = numer
     @denominator = denom
   end
-  ##def math
+
     def divdec
+      fnumerator = numerator.to_f
+      fdenominator = denominator.to_f
       if denominator != 0
-        numerator/denominator.to_f
+        fnumerator/fdenominator
       else
         puts "Cannot divide by 0"
       end
@@ -54,3 +58,8 @@ class Fractions
       end
     end
 end
+
+a = Fractions.new(numer, denom)
+a.divdec
+a.divstring
+a.divredstring
